@@ -9,6 +9,9 @@ import ver.Java
  * @使用说明： -
  */
 object Java {
-  val Junit =
-    "org.junit.jupiter:junit-jupiter-api:${Java.JunitJupiterApi}"
+  val Junit =Junit("+")
+  
+  fun Junit(version: String): String {
+    return "org.junit.jupiter:junit-jupiter-api:${version}"
+  }
 }

@@ -7,10 +7,19 @@ package dep
  * @使用说明： -
  */
 object SqlDelight {
-  val AndroidDriver =
-    "com.squareup.sqldelight:android-driver:${ver.SqlDelight.SqlDelightDriver}"
-  val NativeDriver =
-    "com.squareup.sqldelight:native-driver:${ver.SqlDelight.SqlDelightDriver}"
-  val JvmDriver =
-    "com.squareup.sqldelight:sqlite-driver:${ver.SqlDelight.SqlDelightDriver}"
+  val AndroidDriver = AndroidDriver("+")
+  val NativeDriver = NativeDriver("+")
+  val JvmDriver = JvmDriver("+")
+  
+  fun AndroidDriver(version: String): String {
+    return "com.squareup.sqldelight:android-driver:${version}"
+  }
+  
+  fun NativeDriver(version: String): String {
+    return "com.squareup.sqldelight:native-driver:${version}"
+  }
+  
+  fun JvmDriver(version: String): String {
+    return "com.squareup.sqldelight:sqlite-driver:${version}"
+  }
 }

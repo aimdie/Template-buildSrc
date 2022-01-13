@@ -9,14 +9,20 @@ import ver.Kotlin
  * @使用说明： -
  */
 object Kotlin {
-  val Stdlib =
-    "org.jetbrains.kotlin:kotlin-stdlib:${Kotlin.KotlinVersion}"
+  val Stdlib =Stdlib("+")
+  
+  fun Stdlib(version: String): String {
+    return "org.jetbrains.kotlin:kotlin-stdlib:${version}"
+  }
   object Test{
     
     /**
      * 导入后可调试。
      */
-    val Junit =
-      "org.jetbrains.kotlin:kotlin-test-junit:${Kotlin.KotlinVersion}"
+    val Junit =Junit("+")
+  
+    fun Junit(version: String): String {
+      return "org.jetbrains.kotlin:kotlin-test-junit:${version}"
+    }
   }
 }
