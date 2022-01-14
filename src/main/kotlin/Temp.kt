@@ -5,6 +5,6 @@
  * @使用说明： -
  */
 
-fun (version: String): String {
-  return ":${version}"
-}
+//fun (version: String = "+"): String {
+//  return ":${version}"
+//}

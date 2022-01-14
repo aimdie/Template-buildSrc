@@ -1,7 +1,5 @@
 package dep
 
-import ver.Java
-
 /**
  * @作者 做就行了！
  * @时间 2021/8/20 11:05
@@ -9,9 +7,9 @@ import ver.Java
  * @使用说明： -
  */
 object Java {
-  val Junit =Junit("+")
+  val Junit =Junit()
   
-  fun Junit(version: String): String {
+  fun Junit(version: String = "+"): String {
     return "org.junit.jupiter:junit-jupiter-api:${version}"
   }
 }

@@ -7,8 +7,8 @@ package dep
  * @使用说明： -
  */
 object Android {
-  val AppCompat = AppCompat("+")
-  fun AppCompat(version: String): String {
+  val AppCompat = AppCompat()
+  fun AppCompat(version: String = "+"): String {
     return "androidx.appcompat:appcompat:${version}"
   }
 }

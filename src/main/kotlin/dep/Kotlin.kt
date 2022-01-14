@@ -1,6 +1,5 @@
 package dep
 
-import ver.Kotlin
 
 /**
  * @作者 做就行了！
@@ -9,9 +8,9 @@ import ver.Kotlin
  * @使用说明： -
  */
 object Kotlin {
-  val Stdlib =Stdlib("+")
+  val Stdlib =Stdlib()
   
-  fun Stdlib(version: String): String {
+  fun Stdlib(version: String = "+"): String {
     return "org.jetbrains.kotlin:kotlin-stdlib:${version}"
   }
   object Test{
@@ -19,9 +18,9 @@ object Kotlin {
     /**
      * 导入后可调试。
      */
-    val Junit =Junit("+")
+    val Junit =Junit()
   
-    fun Junit(version: String): String {
+    fun Junit(version: String = "+"): String {
       return "org.jetbrains.kotlin:kotlin-test-junit:${version}"
     }
   }
