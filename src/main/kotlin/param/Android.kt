@@ -7,7 +7,7 @@ package param
  * @使用说明： -
  */
 object Android {
-  val minSdkVersion = 22
+  val minSdkVersion = 23
   val targetSdkVersion = 29
   
   /**

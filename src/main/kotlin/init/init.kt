@@ -14,7 +14,7 @@ import java.util.*
  * 项目的根目录文件："vers.properties"
  */
 private val VersionsFileName = "vers.properties"
-var p: Properties? = null
+private var p: Properties? = null
 
 /**
  * 初始化：项目的根目录文件："vers.properties"
@@ -27,6 +27,6 @@ fun initVersions(rootProject:Project) {
   p!!.load(FileInputStream(rootProject.file(VersionsFileName)))
 }
 
-fun getVer(keyInProperties: String): String {
-  return p?.get(keyInProperties)?.toString() ?: "+"
+internal fun getVer(keyInProperties: String, defaultVersion:String="+"): String {
+  return p?.get(keyInProperties)?.toString() ?: defaultVersion
 }
