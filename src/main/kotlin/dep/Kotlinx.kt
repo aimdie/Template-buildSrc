@@ -1,5 +1,7 @@
 package dep
 
+import init.getVer
+
 
 /**
  * @作者 做就行了！
@@ -12,18 +14,18 @@ object Kotlinx {
   /**
    * 自动导入"serializationCore"。
    */
-  val SerializationJson = SerializationJson()
+  val serializationJson = serializationJson()
   
   /**
    */
-  val CoroutinesCore = CoroutinesCore()
+  val coroutinesCore = coroutinesCore()
   
-  //  fun SerializationJson(version: String = "+" = "+"): String {
-  fun SerializationJson(version: String = "+"): String {
+  //  fun serializationJson(version: String = "+" = "+"): String {
+  fun serializationJson(version: String = getVer("kotlinx_serialization_json")): String {
     return "org.jetbrains.kotlinx:kotlinx-serialization-json:${version}"
   }
   
-  fun CoroutinesCore(version: String = "+"): String {
+  fun coroutinesCore(version: String = getVer("kotlinx_coroutines_core")): String {
     return "org.jetbrains.kotlinx:kotlinx-coroutines-core:${version}"
   }
 }

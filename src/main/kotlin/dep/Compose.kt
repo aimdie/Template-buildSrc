@@ -1,5 +1,7 @@
 package dep
 
+import init.getVer
+
 /**
  * @作者 做就行了！
  * @时间 2021/8/20 20:56
@@ -7,69 +9,105 @@ package dep
  * @使用说明： -
  */
 object Compose {
-  val Ui = Ui()
-  val Material = Material()
-  val Animation = Animation()
-  val Foundation = Foundation()
-  val Runtime = Runtime()
-  val UiTooling = UiTooling()
-  val Preview = Preview()
-  val MaterialIconsExtended = MaterialIconsExtended()
+  val ui = ui()
+  val material = material()
+  val animation = animation()
+  val foundation = foundation()
+  val runtime = runtime()
+  val uiTooling = uiTooling()
+  val uiToolingPreview = uiToolingPreview()
+  val materialIconsExtended = materialIconsExtended()
   
   object Android {
-    val UiTooling = UiTooling()
-    val UiToolingPreview =UiToolingPreview()
-    val Activity = Activity()
-    val ConstraintLayout =ConstraintLayout()
+    val uiTooling = uiTooling()
+    val uiToolingPreview = uiToolingPreview()
+    val activity = activity()
+    val constraintLayout = constraintLayout()
     //////////////////////////////////////////////////
     
-    fun UiTooling(version: String = "+"): String {
+    fun uiTooling(
+      version: String
+      = getVer("compose_android_ui_tooling")
+    ): String {
       return "androidx.compose.ui:ui-tooling:${version}"
     }
     
-    fun UiToolingPreview(version: String = "+"): String {
+    fun uiToolingPreview(
+      version: String
+      = getVer("compose_android_ui_tooling_preview")
+    ): String {
       return "androidx.compose.ui:ui-tooling-preview:${version}"
     }
     
-    fun Activity(version: String = "+"): String {
+    fun activity(
+      version: String
+      = getVer("compose_android_activity")
+    ): String {
       return "androidx.activity:activity-compose:${version}"
     }
     
-    fun ConstraintLayout(version: String = "+"): String {
+    fun constraintLayout(
+      version: String
+      = getVer("compose_android_constraintlayout")
+    ): String {
       return "androidx.constraintlayout:constraintlayout-compose:${version}"
     }
   }
   //////////////////////////////////////////////////
   
-  fun Ui(version: String = "+"): String {
+  fun ui(
+    version: String
+    = getVer("compose_ui")
+  ): String {
     return "org.jetbrains.compose.ui:ui:${version}"
   }
   
-  fun Material(version: String = "+"): String {
+  fun material(
+    version: String
+    = getVer("compose_material")
+  ): String {
     return "org.jetbrains.compose.material:material:${version}"
   }
   
-  fun Animation(version: String = "+"): String {
+  fun animation(
+    version: String
+    = getVer("compose_animation")
+  ): String {
     return "org.jetbrains.compose.animation:animation:${version}"
   }
   
-  fun Foundation(version: String = "+"): String {
+  fun foundation(
+    version: String
+    = getVer("compose_foundation")
+  ): String {
     return "org.jetbrains.compose.foundation:foundation:${version}"
   }
   
-  fun Runtime(version: String = "+"): String {
+  fun runtime(
+    version: String
+    = getVer("compose_runtime")
+  ): String {
     return "org.jetbrains.compose.runtime:runtime:${version}"
   }
   
-  fun UiTooling(version: String = "+"): String {
+  fun uiTooling(
+    version: String
+    = getVer("compose_ui_tooling")
+  ): String {
     return "org.jetbrains.compose.ui:ui-tooling:${version}"
   }
   
-  fun Preview(version: String = "+"): String {
+  fun uiToolingPreview(
+    version: String
+    = getVer("compose_ui_tooling_preview")
+  ): String {
     return "org.jetbrains.compose.ui:ui-tooling-preview:${version}"
   }
   
-  fun MaterialIconsExtended(version: String = "+"): String {
+  fun materialIconsExtended(
+    version: String
+    = getVer("compose_material_icons_extended")
+  ): String {
     return "org.jetbrains.compose.material:material-icons-extended:${version}"
   }
 }

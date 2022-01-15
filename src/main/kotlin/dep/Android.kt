@@ -1,5 +1,7 @@
 package dep
 
+import init.getVer
+
 /**
  * @作者 做就行了！
  * @时间 2021/8/20 11:04
@@ -7,8 +9,10 @@ package dep
  * @使用说明： -
  */
 object Android {
-  val AppCompat = AppCompat()
-  fun AppCompat(version: String = "+"): String {
+  val appCompat = appCompat()
+  fun appCompat(
+    version: String = getVer("android_appcompat")
+  ): String {
     return "androidx.appcompat:appcompat:${version}"
   }
 }
