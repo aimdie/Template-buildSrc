@@ -21,6 +21,9 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-7.1-all.zip
 val AndroidToolsBuildGradle = AndroidToolsBuildGradle()
 
 fun KotlinGradlePlugin(version: String = getVer("kotlin")): String {
+//  println("DEBUG:KotlinGradlePlugin:version=$version")
+//  println("DEBUG:KotlinGradlePlugin:version=$version")
+//  println("DEBUG:KotlinGradlePlugin:version=$version")
   return "org.jetbrains.kotlin:kotlin-gradle-plugin:${version}"
 }
 

@@ -8,8 +8,8 @@ import init.getVer
  * @该类描述： -
  * @使用说明： -
  */
-val kotlinVer: String = getVer("kotlin", "1.5.32")
-val composeVer = getVer("compose", "1.0.1-rc2")
+//val kotlinVer: String = getVer("kotlin", "1.5.32")
+//val composeVer = getVer("compose", "1.0.1-rc2")
 //fun getKotlinVer(): String {
 //  return kotlinVer
 //}
