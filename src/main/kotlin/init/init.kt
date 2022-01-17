@@ -15,13 +15,15 @@ import java.util.*
  */
 private val VersionsFileName = "vers.properties"
 private var p: Properties? = null
-
+private var initCount=0
 /**
  * 初始化：项目的根目录文件："vers.properties"
  */
 fun initVersions(rootProject:Project) {
+  initCount++
   if(p!=null){
-    throw IllegalCallerException("禁止多次初始化。")
+    println("当前调用次数：initCount=$initCount")
+    return
   }
   p = Properties()
   p!!.load(FileInputStream(rootProject.file(VersionsFileName)))
