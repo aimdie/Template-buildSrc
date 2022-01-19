@@ -3,29 +3,30 @@ import org.gradle.kotlin.dsl.`kotlin-dsl`
 plugins {
   `kotlin-dsl`
   `kotlin-dsl-precompiled-script-plugins`
-  //id("org.gradle.kotlin.kotlin-dsl.precompiled-script-plugins") version "2.1.4"
 }
 
 buildscript {
   repositories {
     google()
-    jcenter() // left read only forever
     mavenCentral()
   }
   
   dependencies {
-    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31")
+    val kver = "1.5.21"
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kver")
   }
 }
 
 repositories {
   google()
-  jcenter() // left read only forever
   mavenCentral()
 }
 
 dependencies {
-  implementation("com.android.tools.build:gradle:4.2.2")
-  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31")
-  implementation("com.android.tools.build:gradle-api:4.2.2")
+  val aver = "7.0.4"
+  val kver = "1.5.21"
+  implementation("com.android.tools.build:gradle:$aver")
+  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:$kver")
+  implementation("org.jetbrains.kotlin:kotlin-serialization:$kver")
+//  implementation("com.android.tools.build:gradle-api:4.2.2")
 }

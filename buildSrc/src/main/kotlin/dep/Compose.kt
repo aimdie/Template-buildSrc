@@ -21,92 +21,76 @@ object Compose {
   object Android {
     val uiTooling = uiTooling()
     val uiToolingPreview = uiToolingPreview()
-    val activity = activity()
-    val constraintLayout = constraintLayout()
     //////////////////////////////////////////////////
     
     fun uiTooling(
       version: String
-      = getVer("compose_android_ui_tooling")
+      = getVer("compose")
     ): String {
       return "androidx.compose.ui:ui-tooling:${version}"
     }
     
     fun uiToolingPreview(
       version: String
-      = getVer("compose_android_ui_tooling_preview")
+      = getVer("compose")
     ): String {
       return "androidx.compose.ui:ui-tooling-preview:${version}"
-    }
-    
-    fun activity(
-      version: String
-      = getVer("compose_android_activity")
-    ): String {
-      return "androidx.activity:activity-compose:${version}"
-    }
-    
-    fun constraintLayout(
-      version: String
-      = getVer("compose_android_constraintlayout")
-    ): String {
-      return "androidx.constraintlayout:constraintlayout-compose:${version}"
     }
   }
   //////////////////////////////////////////////////
   
   fun ui(
     version: String
-    = getVer("compose_ui")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.ui:ui:${version}"
   }
   
   fun material(
     version: String
-    = getVer("compose_material")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.material:material:${version}"
   }
   
   fun animation(
     version: String
-    = getVer("compose_animation")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.animation:animation:${version}"
   }
   
   fun foundation(
     version: String
-    = getVer("compose_foundation")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.foundation:foundation:${version}"
   }
   
   fun runtime(
     version: String
-    = getVer("compose_runtime")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.runtime:runtime:${version}"
   }
   
   fun uiTooling(
     version: String
-    = getVer("compose_ui_tooling")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.ui:ui-tooling:${version}"
   }
   
   fun uiToolingPreview(
     version: String
-    = getVer("compose_ui_tooling_preview")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.ui:ui-tooling-preview:${version}"
   }
   
   fun materialIconsExtended(
     version: String
-    = getVer("compose_material_icons_extended")
+    = getVer("compose")
   ): String {
     return "org.jetbrains.compose.material:material-icons-extended:${version}"
   }

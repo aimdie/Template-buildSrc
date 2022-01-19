@@ -23,6 +23,8 @@ fun PluginDependenciesSpec.pluginKotlinSerialization(){
  * kotlin-parcelize必须在com.android.library之后。
  */
 fun PluginDependenciesSpec.pluginKotlinParcelize(){
-  //kotlin-parcelize必须在com.android.library之后。
   id("kotlin-parcelize")
+}
+fun PluginDependenciesSpec.pluginKotlinAndroidExtension(){
+  id("kotlin-android-extensions")
 }
