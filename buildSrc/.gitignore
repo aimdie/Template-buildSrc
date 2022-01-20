@@ -10,6 +10,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+buildSrcBuild
 
 #忽略该目录和子目录的“***”文件
 /build

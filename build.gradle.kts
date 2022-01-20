@@ -31,9 +31,20 @@ allprojects {
     mavenLocal()
   }
 }
-
+//buildSrc
+//println("subprojects.size=${subprojects.size}")
+//subprojects.forEach{
+//  println("name=$name")
+//
+//}
 //配置子模块的发布信息。
 subprojects {
+//  println("name=$name")
+//  if(name=="buildSrc"){
+//    val path = rootProject.path + "/buildSrcBuild"
+//    println("path=$path")
+//    setBuildDir(path)
+//  }
   configPublishPlan1()
 }
 

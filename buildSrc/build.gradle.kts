@@ -5,18 +5,9 @@ plugins {
   `kotlin-dsl-precompiled-script-plugins`
 }
 
-buildscript {
-  repositories {
-    google()
-    mavenCentral()
-  }
-  
-  dependencies {
-    val kver = "1.5.21"
-    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kver")
-  }
+sourceSets{
+  setBuildDir(rootDir.toString()+"Build")
 }
-
 repositories {
   google()
   mavenCentral()
