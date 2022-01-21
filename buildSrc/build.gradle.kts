@@ -1,5 +1,5 @@
 import org.gradle.kotlin.dsl.`kotlin-dsl`
-
+import java.util.*
 plugins {
   `kotlin-dsl`
   `kotlin-dsl-precompiled-script-plugins`
@@ -14,8 +14,12 @@ repositories {
 }
 
 dependencies {
-  val aver = "7.0.4"
-  val kver = "1.5.21"
+  val versFileName = "vers.properties"
+  val file: File = file(versFileName)
+  val properties = Properties()
+  properties.load(file.inputStream())
+  val aver = properties.getProperty("android_tools_build_gradle","+")
+  val kver = properties.getProperty("kotlin","+")
   implementation("com.android.tools.build:gradle:$aver")
   implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:$kver")
   implementation("org.jetbrains.kotlin:kotlin-serialization:$kver")

@@ -11,3 +11,7 @@ import org.gradle.plugin.use.PluginDependenciesSpec
 fun PluginDependenciesSpec.pluginAndroidLibrary() {
   id("com.android.library")
 }
+
+fun PluginDependenciesSpec.pluginAndroidApplication() {
+  id("com.android.application")
+}
