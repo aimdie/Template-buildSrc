@@ -5,9 +5,9 @@
  * @使用说明： -
  */
 //val debug = false
+internal val debug = true
 
 internal val VersionsFileName = "vers.properties"
-internal val debug = true
 internal val projectVersion = ""
 
 //val projectVersion = ""

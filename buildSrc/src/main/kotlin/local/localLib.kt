@@ -9,6 +9,6 @@ import publish.util.getVersionIlike
  * @该类描述： -
  * @使用说明： -
  */
-fun getLocalLib(id: String, version: String = getVersionIlike()): String {
+fun getLocalLib(id: String, version: String = "+"): String {
   return "$mGroupId:lib-$id:$version"
 }
