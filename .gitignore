@@ -11,3 +11,5 @@
 local.properties
 #忽略：任何目录下的指定文件。
 */build
+#不忽略。必须写在最后。
+!.gitignore

@@ -16,15 +16,4 @@ object Kotlin {
     return "org.jetbrains.kotlin:kotlin-stdlib:${version}"
   }
   
-  object Test{
-    
-    /**
-     * 导入后可调试。
-     */
-    val junit =junit()
-  
-    fun junit(version: String = getVer("kotlin")): String {
-      return "org.jetbrains.kotlin:kotlin-test-junit:${version}"
-    }
-  }
 }

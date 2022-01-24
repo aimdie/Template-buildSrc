@@ -1,4 +1,4 @@
-package dep
+package dep.deprecated
 
 import getVer
 
@@ -9,7 +9,7 @@ import getVer
  * @使用说明： -
  */
 object Java {
-  val junit =junit()
+  val junit = junit()
   
   fun junit(version: String = getVer("java_junit")): String {
     return "org.junit.jupiter:junit-jupiter-api:${version}"
