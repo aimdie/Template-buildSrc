@@ -6,5 +6,9 @@ repositories {
   google()
   mavenCentral()
 }
+val rootDir = project.rootDir
+val projectDir = project.projectDir
 
-setBuildDir(project.projectDir.parent + "/.${name}Build")
+println("rootDir=$rootDir")
+println("projectDir=$projectDir")
+setBuildDir(project.projectDir.parent + "/.builds/.${name}Build")
