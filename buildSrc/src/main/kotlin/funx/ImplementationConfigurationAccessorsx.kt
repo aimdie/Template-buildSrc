@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2018 the original author or authors.
  *
@@ -16,41 +15,31 @@
  */
 
 @file:Suppress(
-    "unused",
-    "nothing_to_inline",
-    "useless_cast",
-    "unchecked_cast",
-    "extension_shadowed_by_member",
-    "redundant_projection",
-    "RemoveRedundantBackticks",
-    "ObjectPropertyName",
-    "deprecation", "PackageDirectoryMismatch"
+  "unused",
+  "nothing_to_inline",
+  "useless_cast",
+  "unchecked_cast",
+  "extension_shadowed_by_member",
+  "redundant_projection",
+  "RemoveRedundantBackticks",
+  "ObjectPropertyName",
+  "deprecation", "PackageDirectoryMismatch"
 )
 @file:org.gradle.api.Generated
 
 /* ktlint-disable */
+
 import org.gradle.api.Action
-import org.gradle.api.Incubating
-import org.gradle.api.NamedDomainObjectProvider
-import org.gradle.api.Project
-import org.gradle.api.Task
-import org.gradle.api.artifacts.Configuration
-import org.gradle.api.artifacts.ConfigurablePublishArtifact
-import org.gradle.api.artifacts.ConfigurationContainer
-import org.gradle.api.artifacts.Dependency
-import org.gradle.api.artifacts.DependencyConstraint
-import org.gradle.api.artifacts.ExternalModuleDependency
-import org.gradle.api.artifacts.ModuleDependency
-import org.gradle.api.artifacts.PublishArtifact
+import org.gradle.api.artifacts.*
 import org.gradle.api.artifacts.dsl.ArtifactHandler
 import org.gradle.api.artifacts.dsl.DependencyConstraintHandler
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.api.provider.Provider
-import org.gradle.api.tasks.TaskContainer
-import org.gradle.api.tasks.TaskProvider
-
-import org.gradle.kotlin.dsl.*
-import org.gradle.kotlin.dsl.accessors.runtime.*
+import org.gradle.kotlin.dsl.accessors.runtime.addConfiguredDependencyTo
+import org.gradle.kotlin.dsl.accessors.runtime.addDependencyTo
+import org.gradle.kotlin.dsl.accessors.runtime.addExternalModuleDependencyTo
+import org.gradle.kotlin.dsl.add
+import org.gradle.kotlin.dsl.create
 
 
 /**
@@ -62,7 +51,7 @@ import org.gradle.kotlin.dsl.accessors.runtime.*
  * @see [DependencyHandler.add]
  */
 fun DependencyHandler.`imp`(dependencyNotation: Any): Dependency? =
-    add("implementation", dependencyNotation)
+  add("implementation", dependencyNotation)
 
 /**
  * Adds a dependency to the 'implementation' configuration.
@@ -74,10 +63,10 @@ fun DependencyHandler.`imp`(dependencyNotation: Any): Dependency? =
  * @see [DependencyHandler.add]
  */
 fun DependencyHandler.`imp`(
-    dependencyNotation: String,
-    dependencyConfiguration: Action<ExternalModuleDependency>
+  dependencyNotation: String,
+  dependencyConfiguration: Action<ExternalModuleDependency>
 ): ExternalModuleDependency = addDependencyTo(
-    this, "implementation", dependencyNotation, dependencyConfiguration
+  this, "implementation", dependencyNotation, dependencyConfiguration
 ) as ExternalModuleDependency
 
 /**
@@ -90,10 +79,10 @@ fun DependencyHandler.`imp`(
  * @see [DependencyHandler.add]
  */
 fun DependencyHandler.`imp`(
-    dependencyNotation: Provider<*>,
-    dependencyConfiguration: Action<ExternalModuleDependency>
+  dependencyNotation: Provider<*>,
+  dependencyConfiguration: Action<ExternalModuleDependency>
 ): Unit = addConfiguredDependencyTo(
-    this, "implementation", dependencyNotation, dependencyConfiguration
+  this, "implementation", dependencyNotation, dependencyConfiguration
 )
 
 /**
@@ -112,15 +101,23 @@ fun DependencyHandler.`imp`(
  * @see [DependencyHandler.add]
  */
 fun DependencyHandler.`imp`(
-    group: String,
-    name: String,
-    version: String? = null,
-    configuration: String? = null,
-    classifier: String? = null,
-    ext: String? = null,
-    dependencyConfiguration: Action<ExternalModuleDependency>? = null
+  group: String,
+  name: String,
+  version: String? = null,
+  configuration: String? = null,
+  classifier: String? = null,
+  ext: String? = null,
+  dependencyConfiguration: Action<ExternalModuleDependency>? = null
 ): ExternalModuleDependency = addExternalModuleDependencyTo(
-    this, "implementation", group, name, version, configuration, classifier, ext, dependencyConfiguration
+  this,
+  "implementation",
+  group,
+  name,
+  version,
+  configuration,
+  classifier,
+  ext,
+  dependencyConfiguration
 )
 
 /**
@@ -133,8 +130,8 @@ fun DependencyHandler.`imp`(
  * @see [DependencyHandler.add]
  */
 fun <T : ModuleDependency> DependencyHandler.`imp`(
-    dependency: T,
-    dependencyConfiguration: T.() -> Unit
+  dependency: T,
+  dependencyConfiguration: T.() -> Unit
 ): T = add("implementation", dependency, dependencyConfiguration)
 
 /**
@@ -147,7 +144,7 @@ fun <T : ModuleDependency> DependencyHandler.`imp`(
  * @see [DependencyConstraintHandler.add]
  */
 fun DependencyConstraintHandler.`imp`(constraintNotation: Any): DependencyConstraint? =
-    add("implementation", constraintNotation)
+  add("implementation", constraintNotation)
 
 /**
  * Adds a dependency constraint to the 'implementation' configuration.
@@ -159,8 +156,11 @@ fun DependencyConstraintHandler.`imp`(constraintNotation: Any): DependencyConstr
  *
  * @see [DependencyConstraintHandler.add]
  */
-fun DependencyConstraintHandler.`imp`(constraintNotation: Any, block: DependencyConstraint.() -> Unit): DependencyConstraint? =
-    add("implementation", constraintNotation, block)
+fun DependencyConstraintHandler.`imp`(
+  constraintNotation: Any,
+  block: DependencyConstraint.() -> Unit
+): DependencyConstraint? =
+  add("implementation", constraintNotation, block)
 
 /**
  * Adds an artifact to the 'implementation' configuration.
@@ -171,7 +171,7 @@ fun DependencyConstraintHandler.`imp`(constraintNotation: Any, block: Dependency
  * @see [ArtifactHandler.add]
  */
 fun ArtifactHandler.`imp`(artifactNotation: Any): PublishArtifact =
-    add("implementation", artifactNotation)
+  add("implementation", artifactNotation)
 
 /**
  * Adds an artifact to the 'implementation' configuration.
@@ -183,10 +183,10 @@ fun ArtifactHandler.`imp`(artifactNotation: Any): PublishArtifact =
  * @see [ArtifactHandler.add]
  */
 fun ArtifactHandler.`imp`(
-    artifactNotation: Any,
-    configureAction:  ConfigurablePublishArtifact.() -> Unit
+  artifactNotation: Any,
+  configureAction: ConfigurablePublishArtifact.() -> Unit
 ): PublishArtifact =
-    add("implementation", artifactNotation, configureAction)
+  add("implementation", artifactNotation, configureAction)
 
 
 

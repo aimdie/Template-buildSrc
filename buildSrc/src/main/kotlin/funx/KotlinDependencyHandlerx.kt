@@ -1,4 +1,4 @@
-//@file:Suppress("PackageDirectoryMismatch")
+//package funx//@file:Suppress("PackageDirectoryMismatch")
 //
 //import groovy.lang.Closure
 //import org.gradle.api.artifacts.Dependency

@@ -10,27 +10,34 @@ import getVer
  */
 object Android {
   val appCompat = appCompat()
-  val activity = activity()
+  val activityCompose = activityCompose()
   val constraintLayout = constraintLayout()
-  
+  val coreKtx = coreKtx()
   fun appCompat(
-    version: String = getVer("android_appcompat")
+    version: String = getVer("androidx_appcompat")
   ): String {
     return "androidx.appcompat:appcompat:${version}"
   }
   
   
-  fun activity(
+  fun activityCompose(
     version: String
-    = getVer("android_activity_compose")
+    = getVer("androidx_activity_compose")
   ): String {
     return "androidx.activity:activity-compose:${version}"
   }
   
   fun constraintLayout(
     version: String
-    = getVer("android_constraintlayout_compose")
+    = getVer("androidx_constraintlayout_compose")
   ): String {
     return "androidx.constraintlayout:constraintlayout-compose:${version}"
+  }
+  
+  fun coreKtx(
+    version: String
+    = getVer("androidx_core_ktx")
+  ): String {
+    return "androidx.core:core-ktx:${version}"
   }
 }
