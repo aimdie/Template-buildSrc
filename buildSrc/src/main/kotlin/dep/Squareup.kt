@@ -14,6 +14,13 @@ object Squareup {
     fun okio(version: String = getVer("squareup_okio")): String {
       return "com.squareup.okio:okio:${version}"
     }
+    
+    object Js {
+      val nodefilesystem = nodefilesystem()
+      fun nodefilesystem(version: String = getVer("squareup_okio")): String {
+        return "com.squareup.okio:okio-nodefilesystem:${version}"
+      }
+    }
   }
   
   object SqlDelight {

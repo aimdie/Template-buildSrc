@@ -10,10 +10,16 @@ import getVer
  * @使用说明： -
  */
 object Kotlin {
-  val stdlib =stdlib()
+  val stdlib = stdlib()
   
   fun stdlib(version: String = getVer("kotlin")): String {
     return "org.jetbrains.kotlin:kotlin-stdlib:${version}"
   }
   
+  object Java {
+    val reflect = reflect()
+    fun reflect(version: String = getVer("kotlin")): String {
+      return "org.jetbrains.kotlin:kotlin-reflect:${version}"
+    }
+  }
 }

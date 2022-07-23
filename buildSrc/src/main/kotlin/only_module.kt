@@ -6,7 +6,6 @@
  */
 //val debug = false
 internal val debug = true
-
 internal val VersionsFileName = "vers.properties"
 internal val projectVersion = ""
 
