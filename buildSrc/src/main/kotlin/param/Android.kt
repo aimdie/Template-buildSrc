@@ -1,13 +1,13 @@
 package param
 
 /**
- * @作者 做就行了！
+ * @作者 向死而生
  * @时间 2021/8/18 22:00
  * @该类描述： -
  * @使用说明： -
  */
 object Android {
-  val minSdkVersion = 23
+  val minSdkVersion = 24
   val targetSdkVersion = 29
   
   /**

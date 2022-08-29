@@ -4,7 +4,7 @@ import org.gradle.kotlin.dsl.kotlin
 import org.gradle.plugin.use.PluginDependenciesSpec
 
 /**
- * @作者 做就行了！
+ * @作者 向死而生
  * @时间 2021/8/20 20:50
  * @该类描述： -
  * @使用说明： -

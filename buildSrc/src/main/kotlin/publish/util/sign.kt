@@ -8,7 +8,7 @@ import org.gradle.kotlin.dsl.getByName
 import org.gradle.plugins.signing.SigningExtension
 
 /**
- * @作者 做就行了！
+ * @作者 向死而生
  * @时间 2021/7/8 23:44
  * @该类描述： -
  * @使用说明： -
