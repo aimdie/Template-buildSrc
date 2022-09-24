@@ -1,5 +1,3 @@
-@file:Suppress("PackageDirectoryMismatch")
-
 import org.gradle.api.Project
 import java.io.FileInputStream
 import java.util.*
@@ -50,7 +48,10 @@ fun initVersions(rootProject: Project) {
   p!!.load(fileInputStream)
 }
 
-internal fun getVer(keyInProperties: String, defaultVersion: String = "+"): String {
+internal fun getVer(
+  keyInProperties: String,
+  defaultVersion: String = "+"
+): String {
   val version = p?.get(keyInProperties)?.toString() ?: defaultVersion
   if (debug) {
     println("$keyInProperties=$version")

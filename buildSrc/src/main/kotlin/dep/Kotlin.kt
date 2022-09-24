@@ -11,15 +11,18 @@ import getVer
  */
 object Kotlin {
   val stdlib = stdlib()
-  
   fun stdlib(version: String = getVer("kotlin")): String {
     return "org.jetbrains.kotlin:kotlin-stdlib:${version}"
   }
   
   object Java {
     val reflect = reflect()
+    val stdlibJdk8=stdlibJdk8()
     fun reflect(version: String = getVer("kotlin")): String {
       return "org.jetbrains.kotlin:kotlin-reflect:${version}"
+    }
+    fun stdlibJdk8(version: String = getVer("kotlin")): String {
+      return "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${version}"
     }
   }
 }
