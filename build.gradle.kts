@@ -4,6 +4,7 @@ buildscript {
   initVersions(rootProject)
   
   repositories {
+    maven("https://repo.huaweicloud.com/repository/maven/")
     gradlePluginPortal()
     google()
     mavenCentral()
@@ -25,6 +26,7 @@ buildscript {
 //}
 allprojects {
   repositories {
+    maven("https://repo.huaweicloud.com/repository/maven/")
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     google()
     mavenCentral()
